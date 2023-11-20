@@ -1,0 +1,140 @@
+.login-root {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.loginbackground {
+  min-height: 692px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.formContainer {
+  margin: 90px 50px; /* Ajustado el margen */
+  width: 100%;
+  max-width: 448px;
+  background-color: rgba(193, 187, 193, 0.8); /* Paleta con transparencia */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 60px;
+  padding-right: 100px;
+  color: #44322a; /* Color principal */
+}
+
+.label {
+  margin-bottom: 10px;
+  font-size: 18px; /* Aumentada la fuente */
+  font-weight: 600;
+}
+
+.inputField {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 10px 16px; /* Aumentado el padding */
+  width: 100%;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgba(84, 105, 212, 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+.buttonContainer {
+  background-color: #d2691e; /* Color principal */
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 1px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.homeButton {
+  background-color: #d2691e;
+  color: #44322a;
+  font-size: 20px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none
+}
+
+.homeButton:hover {
+  background-color: #44322a;
+  color: #fafafa;
+}
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: #00ff00;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Nuevos estilos para temperamentos */
+.selectedTemperaments {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.selectedTemperament {
+  background-color: #fafafa;
+  color: #44322a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.unselectedButton {
+  background-color: #fafafa;
+  color: #44322a;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.selectedButton {
+  background-color: #44322a;
+  color: #fafafa;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}

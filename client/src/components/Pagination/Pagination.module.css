@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px !important;
+}
+
+.paginationButton {
+  padding: 8px 16px;
+  border: none;
+  background-color: #d2691e; /* Color principal */
+  color: white; /* Texto en color claro para mayor visibilidad */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.paginationButton:hover {
+  background-color: #4d2509; /* Cambio de color al pasar el mouse */
+}
+
+.pageInfo {
+  margin: 0 20px;
+  font-size: 16px;
+  color: #44322a; /* Color oscuro para el texto */
+}
+
+.pageNumber {
+  color: #fafafa; /* Texto en color claro para mayor visibilidad */
+  padding-left: 250px;
+}
+
+.totalPages {
+  color: #fafafa;
+}

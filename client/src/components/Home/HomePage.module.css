@@ -1,0 +1,71 @@
+body {
+    background-image: url('../../assets/img/fondoHome0.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0%;
+    padding: 0%;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding-bottom: 20%;
+    /* overflow-x: hidden; */
+  }
+
+
+  .pageTitle {
+    color: #a38a8a;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center; /* Centrar horizontalmente */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+  }
+  
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr)); /* Ajusta el valor */
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    grid-column: span 1;
+    background-color: #464646; 
+    box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .name {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .temperaments {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .image {
+    object-fit: cover;
+    object-position: center;
+    height: 60vh;
+    width: 100%;
+    margin-bottom: 10px;
+  }

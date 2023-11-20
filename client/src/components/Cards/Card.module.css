@@ -1,0 +1,101 @@
+/* Card.module.css */
+:root {
+  --surface-color: #d2691ece; /* Marrón soleado */
+  --curve: 15;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1.5em; /* Tamaño de fuente más grande para el nombre del perro */
+  margin: 0 0 0.3em;
+  color: #1e1613; /* Color neutro oscuro */
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-size: 1.5em; /* Tamaño de fuente más grande al pasar el mouse */
+  color: #120e0b; /* Color neutro oscuro */
+}
+
+.card__status {
+  font-size: 1.5em; /* Tamaño de fuente más grande al pasar el mouse */
+  color: #231a16; /* Color neutro oscuro */
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  font-size: 1em;
+  color: #423D43;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

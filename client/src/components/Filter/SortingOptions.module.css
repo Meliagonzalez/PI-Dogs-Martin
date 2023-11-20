@@ -1,0 +1,20 @@
+.sortingOptions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #d2691e; /* Cambié el color del texto a un marrón soleado atardecer */
+  padding-left: 107.5rem;
+  font-size: 20px; /* Ajusté el tamaño de la fuente */
+}
+
+.label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.select {
+  padding: 5px;
+  border: 1px solid #d2691e; /* Cambié el color del borde a un marrón soleado atardecer */
+  border-radius: 10px;
+  font-size: 18px; /* Ajusté el tamaño de la fuente */
+}

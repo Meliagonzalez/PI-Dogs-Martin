@@ -1,0 +1,32 @@
+/* SearchBar.module.css */
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding-top: 2px; /* Ajuste del padding-top */
+  padding-left: 100px;
+}
+
+input {
+  padding: 12px; /* Ajuste del padding para agrandar el área de búsqueda */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 12px 16px; /* Ajuste del padding para agrandar el botón */
+  background-color: #FAFAFA;
+  color: #44322A;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #d2691e;
+  color: #FAFAFA;
+}

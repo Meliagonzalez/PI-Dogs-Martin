@@ -1,0 +1,66 @@
+/* DogDetail.module.css */
+
+.dog-detail-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-left: 200px;
+}
+
+.centeredHomeButton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.homeButton {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.homeButton:hover {
+  background-color: #555;
+}
+
+.dog-detail {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #d2691eb7;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.dog-detail-img {
+  max-width: 100%;
+  max-height: 335px;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.horizontal-img {
+  max-height: 335px;
+  max-width: 500px;
+}
+
+.vertical-img {
+  max-height: 500px;
+  max-width: 357px;
+}
+
+.dog-detail-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
