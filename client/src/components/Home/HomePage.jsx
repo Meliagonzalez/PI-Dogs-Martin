@@ -28,26 +28,23 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-       const dis = await dispatch(fetchDogs());
-       if (dis) {
-         setLoading(false);
+        const dis = await dispatch(fetchDogs());
+        if (dis) {
+          setLoading(false);
         } else {
-          setLoading(true)
+          setLoading(true);
         }
-        
       } catch (error) {
-        return error.message
-        
+        return error.message;
       }
-
-    }
-    fetchData()
+    };
+    fetchData();
   }, [dispatch]);
 
   // Función para manejar la búsqueda de perros por nombre:
   const handleSearch = (term) => {
     const results = allDogs.filter((dog) =>
-      dog.nombre.toLowerCase().includes(term.toLowerCase())
+      dog.nombre.toLowerCase().includes(term.toLowerCase()),
     );
     setSearchResults(results);
     setCurrentPage(1);
@@ -88,7 +85,7 @@ const HomePage = () => {
       (dog) =>
         (dog.temperamento && dog.temperamento.includes(selectedTemperament)) ||
         (dog.temperaments &&
-          dog.temperaments.some((temp) => temp.name === selectedTemperament))
+          dog.temperaments.some((temp) => temp.name === selectedTemperament)),
     );
   }
 
@@ -108,7 +105,7 @@ const HomePage = () => {
   // Obtener los perros a mostrar en la página actual con un slice
   dogsToShow = sortedDogs.slice(
     (currentPage - 1) * dogsPerPage,
-    currentPage * dogsPerPage
+    currentPage * dogsPerPage,
   );
 
   // Calculo el total de páginas aquí:
@@ -132,35 +129,37 @@ const HomePage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className={style.cardContainer}>
-          {dogsToShow.map((dog) => (
-            <Card
-              key={dog.id}
-              id={dog.id}
-              name={dog.nombre}
-              image={dog.imagen}
-              temperaments={
-                dog.temperamento
-                  ? dog.temperamento
-                      .map((temperamento) => temperamento)
-                      .join(", ")
-                  : dog.temperaments
-                      .map((temperamento) => temperamento.name)
-                      .join(", ")
-              }
-              weight={
-                dog.peso.metric ? `${dog.peso.metric} kg` : `${dog.peso} kg`
-              }
-            />
-          ))}
-        </div>
+        <>
+          <div className={style.cardContainer}>
+            {dogsToShow.map((dog) => (
+              <Card
+                key={dog.id}
+                id={dog.id}
+                name={dog.nombre}
+                image={dog.imagen}
+                temperaments={
+                  dog.temperamento
+                    ? dog.temperamento
+                        .map((temperamento) => temperamento)
+                        .join(", ")
+                    : dog.temperaments
+                        .map((temperamento) => temperamento.name)
+                        .join(", ")
+                }
+                weight={
+                  dog.peso.metric ? `${dog.peso.metric} kg` : `${dog.peso} kg`
+                }
+              />
+            ))}
+          </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+            dogsPerPage={dogsPerPage}
+          />
+        </>
       )}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
-        dogsPerPage={dogsPerPage}
-      />
     </div>
   );
 };

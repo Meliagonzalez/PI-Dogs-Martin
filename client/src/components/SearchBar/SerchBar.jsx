@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './SearchBar.module.css';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
+  useEffect(() => {
+    onSearch(searchTerm)
+  }, [searchTerm])
+
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
-  };
-
-  const handleSearch = () => {
-    onSearch(searchTerm);
   };
 
   return (
@@ -20,7 +20,6 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };
